@@ -15,7 +15,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:  
 env:
-  mavengoal: "Clean install"
+  mavengoal:  "Clean install"
   
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-       run: "mvn -B ${mavengoal} --file ${buildscript}"
+      run: "mvn -B ${mavengoal} --file ${buildscript}"
      # run: mvn -B package --file pom.xml
    # - name: Build the Docker image
     #  run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
